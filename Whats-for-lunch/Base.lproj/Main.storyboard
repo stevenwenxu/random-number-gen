@@ -71,7 +71,7 @@
                                     <action selector="generatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qMY-1c-csu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3P-sd-Umh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3P-sd-Umh" customClass="UICountingLabel">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,18 +103,18 @@
                                 <exclude reference="T3P-sd-Umh"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="bgC-4s-OHA"/>
-                                <exclude reference="lsO-6s-XjD"/>
-                                <exclude reference="dmh-YU-lsw"/>
-                                <exclude reference="fN9-UL-Dzm"/>
-                                <exclude reference="Tzx-dG-oRI"/>
-                                <exclude reference="txY-fY-1Ul"/>
                                 <exclude reference="arF-Pt-mb2"/>
                                 <exclude reference="ooq-Ij-MrF"/>
+                                <exclude reference="dmh-YU-lsw"/>
+                                <exclude reference="fN9-UL-Dzm"/>
                                 <exclude reference="7Jr-OB-aO7"/>
                                 <exclude reference="w7G-oT-dm2"/>
+                                <exclude reference="bgC-4s-OHA"/>
+                                <exclude reference="lsO-6s-XjD"/>
                                 <exclude reference="X6O-A8-0rA"/>
                                 <exclude reference="ewC-nV-y8i"/>
+                                <exclude reference="Tzx-dG-oRI"/>
+                                <exclude reference="txY-fY-1Ul"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -127,25 +127,25 @@
                                 <include reference="T3P-sd-Umh"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="bgC-4s-OHA"/>
-                                <include reference="lsO-6s-XjD"/>
-                                <include reference="dmh-YU-lsw"/>
-                                <include reference="fN9-UL-Dzm"/>
-                                <include reference="Tzx-dG-oRI"/>
-                                <include reference="txY-fY-1Ul"/>
                                 <include reference="arF-Pt-mb2"/>
                                 <include reference="ooq-Ij-MrF"/>
+                                <include reference="dmh-YU-lsw"/>
+                                <include reference="fN9-UL-Dzm"/>
                                 <include reference="7Jr-OB-aO7"/>
                                 <include reference="w7G-oT-dm2"/>
+                                <include reference="bgC-4s-OHA"/>
+                                <include reference="lsO-6s-XjD"/>
                                 <include reference="X6O-A8-0rA"/>
                                 <include reference="ewC-nV-y8i"/>
+                                <include reference="Tzx-dG-oRI"/>
+                                <include reference="txY-fY-1Ul"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="fromTextField" destination="RIs-ln-XyJ" id="XTr-tY-hCE"/>
                         <outlet property="generateBtn" destination="Q7C-fJ-ifx" id="y2b-Ih-CUG"/>
-                        <outlet property="result" destination="T3P-sd-Umh" id="N6w-zc-21o"/>
+                        <outlet property="result" destination="T3P-sd-Umh" id="GPv-SS-Ylz"/>
                         <outlet property="toTextField" destination="GM4-ub-MGV" id="OPC-KG-0fX"/>
                     </connections>
                 </viewController>

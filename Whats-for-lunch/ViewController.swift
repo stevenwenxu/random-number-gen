@@ -8,17 +8,23 @@
 
 import UIKit
 import Foundation
+import UICountingLabel
 
 class ViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var fromTextField: UITextField!
 	@IBOutlet weak var toTextField: UITextField!
 	@IBOutlet weak var generateBtn: UIButton!
-	@IBOutlet weak var result: UILabel!
+	@IBOutlet weak var result: UICountingLabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.fromTextField.delegate = self
 		self.toTextField.delegate = self
+		self.result.format = "%d"
+	}
+
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
 	}
 
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -37,16 +43,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		return true
 	}
 
+	func textFieldDidBeginEditing(textField: UITextField) {
+		textField.text = ""
+	}
+
 	@IBAction func generatePressed(sender: UIButton) {
 		if let from = UInt32(self.fromTextField.text!), let to = UInt32(self.toTextField.text!) where to >= from {
-			self.generateBtn.enabled = true
-			let rand = Int(arc4random_uniform(to - from + 1)) + Int(from)
-			self.result.text = "\(rand)"
-		} else {
-			self.generateBtn.enabled = false
+		self.result.font = UIFont.systemFontOfSize(UIFont.systemFontSize())
+		self.result.textColor = UIColor.blackColor()
+		self.generateBtn.enabled = true
+		let rand = Int(arc4random_uniform(to - from + 1)) + Int(from)
+		self.result.countFrom(CGFloat(from), to: CGFloat(rand))
+		self.result.completionBlock = {
+			self.result.font = UIFont.boldSystemFontOfSize(40)
+			self.result.textColor = UIColor.redColor()
 		}
 		self.fromTextField.resignFirstResponder()
 		self.toTextField.resignFirstResponder()
+		}
 	}
 }
-

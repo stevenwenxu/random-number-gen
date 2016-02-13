@@ -8,7 +8,6 @@
 
 import UIKit
 import Foundation
-import UICountingLabel
 
 class ViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var fromTextField: UITextField!

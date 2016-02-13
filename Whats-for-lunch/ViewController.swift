@@ -14,13 +14,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet weak var fromTextField: UITextField!
 	@IBOutlet weak var toTextField: UITextField!
 	@IBOutlet weak var generateBtn: UIButton!
-	@IBOutlet weak var result: UICountingLabel!
 	
+	var resultNum = 0
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.fromTextField.delegate = self
 		self.toTextField.delegate = self
-		self.result.format = "%d"
+		let tapGesture = UITapGestureRecognizer(target: self, action: "didTapView")
+		self.view.addGestureRecognizer(tapGesture)
 	}
 
 	override func viewDidAppear(animated: Bool) {
@@ -35,9 +37,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		var from = self.fromTextField.text!
 		var to = self.toTextField.text!
 		if self.fromTextField.isFirstResponder() {
-			from = string == "" ? (from as NSString).stringByReplacingCharactersInRange(range, withString: string) : "\(from)" + string
+			from = (from as NSString).stringByReplacingCharactersInRange(range, withString: string)
 		} else if self.toTextField.isFirstResponder() {
-			to = string == "" ? (to as NSString).stringByReplacingCharactersInRange(range, withString: string) : "\(to)" + string
+			to = (to as NSString).stringByReplacingCharactersInRange(range, withString: string)
 		}
 		self.generateBtn.enabled = Int(to) >= Int(from)
 		return true
@@ -49,17 +51,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 	@IBAction func generatePressed(sender: UIButton) {
 		if let from = UInt32(self.fromTextField.text!), let to = UInt32(self.toTextField.text!) where to >= from {
-		self.result.font = UIFont.systemFontOfSize(UIFont.systemFontSize())
-		self.result.textColor = UIColor.blackColor()
-		self.generateBtn.enabled = true
-		let rand = Int(arc4random_uniform(to - from + 1)) + Int(from)
-		self.result.countFrom(CGFloat(from), to: CGFloat(rand))
-		self.result.completionBlock = {
-			self.result.font = UIFont.boldSystemFontOfSize(40)
-			self.result.textColor = UIColor.redColor()
-		}
-		self.fromTextField.resignFirstResponder()
-		self.toTextField.resignFirstResponder()
+			self.generateBtn.enabled = true
+			self.resultNum = Int(arc4random_uniform(to - from + 1)) + Int(from)
+			self.view.endEditing(true)
 		}
 	}
+
+	func didTapView() {
+		self.view.endEditing(true)
+	}
+
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if let identifier = segue.identifier {
+			if identifier == "showResult" {
+				let vc = segue.destinationViewController as! ResultViewController
+				vc.resultNum = self.resultNum
+			}
+		}
+	}
+
 }

@@ -11,6 +11,7 @@ import UIKit
 class ResultViewController: UIViewController {
 
 	@IBOutlet var resultView: UIView!
+	@IBOutlet var resultViewWidth: NSLayoutConstraint!
 
 	var resultNum: Int!
 	var images: [UIImage] = []
@@ -24,22 +25,28 @@ class ResultViewController: UIViewController {
 	}
 
 	override func viewDidLoad() {
-		let digits = String(self.resultNum).characters.flatMap { String($0) }
-		digits.forEach { self.images.append(UIImage(named: $0)!) }
-
-		self.images.forEach {
-			let imageWidth = $0.size.width / $0.size.height * self.resultView.frame.height
-			let start = (self.resultView.frame.width - self.totalWidth) / 2
-			let rect = CGRect(x: start + self.xSoFar, y: 0, width: imageWidth, height: self.resultView.frame.height)
-			let imageView = UIImageView(frame: rect)
-			imageView.image = $0
-			self.resultView.addSubview(imageView)
-			self.xSoFar += imageWidth
-		}
-
+		super.viewDidLoad()
 		let swipeGesture = UISwipeGestureRecognizer(target: self, action: "viewDidSwipe")
 		swipeGesture.direction = .Down
 		self.view.addGestureRecognizer(swipeGesture)
+	}
+
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		let digits = String(self.resultNum).characters.map { String($0) }
+		digits.forEach { self.images.append(UIImage(named: $0)!) }
+
+		self.resultViewWidth.constant = self.totalWidth
+
+		self.images.forEach { img in
+			let imageWidth = img.size.width / img.size.height * self.resultView.frame.height
+			let start = max(0, (self.resultViewWidth.constant - self.totalWidth) / 2)
+			let rect = CGRect(x: start + self.xSoFar, y: 0, width: imageWidth, height: self.resultView.frame.height)
+			let imageView = UIImageView(frame: rect)
+			imageView.image = img
+			self.resultView.addSubview(imageView)
+			self.xSoFar += imageWidth
+		}
 	}
 
 	func viewDidSwipe() {

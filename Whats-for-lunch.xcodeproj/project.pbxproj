@@ -16,9 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		096CD8A1F9C6C7446D91F1E1 /* Pods_Whats_for_lunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whats_for_lunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C5179954D13EECD4717092C /* Pods-Whats-for-lunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whats-for-lunch.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whats-for-lunch/Pods-Whats-for-lunch.release.xcconfig"; sourceTree = "<group>"; };
-		8C20F70FBD7F1A3C6AFC3EC4 /* Pods-Whats-for-lunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whats-for-lunch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whats-for-lunch/Pods-Whats-for-lunch.debug.xcconfig"; sourceTree = "<group>"; };
 		B028ED4C1C6ADBB200B9AD0E /* Whats-for-lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whats-for-lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B028ED4F1C6ADBB200B9AD0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B028ED511C6ADBB200B9AD0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,22 +37,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A7F5D9D70991AAA3F52F1C2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8C20F70FBD7F1A3C6AFC3EC4 /* Pods-Whats-for-lunch.debug.xcconfig */,
-				1C5179954D13EECD4717092C /* Pods-Whats-for-lunch.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		B028ED431C6ADBB200B9AD0E = {
 			isa = PBXGroup;
 			children = (
 				B028ED4E1C6ADBB200B9AD0E /* Whats-for-lunch */,
 				B028ED4D1C6ADBB200B9AD0E /* Products */,
-				8A7F5D9D70991AAA3F52F1C2 /* Pods */,
-				C490FCB6DD39E2C208DC6E9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,14 +65,6 @@
 				B028ED5B1C6ADBB200B9AD0E /* Info.plist */,
 			);
 			path = "Whats-for-lunch";
-			sourceTree = "<group>";
-		};
-		C490FCB6DD39E2C208DC6E9F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				096CD8A1F9C6C7446D91F1E1 /* Pods_Whats_for_lunch.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

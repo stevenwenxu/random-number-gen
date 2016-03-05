@@ -64,6 +64,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		if let identifier = segue.identifier {
 			if identifier == "showResult" {
 				let vc = segue.destinationViewController as! ResultViewController
+				vc.modalPresentationStyle = .FullScreen
+				vc.modalTransitionStyle = .PartialCurl
 				vc.resultNum = self.resultNum
 			}
 		}

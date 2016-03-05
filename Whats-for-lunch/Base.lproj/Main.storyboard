@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whats_for_lunch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RNG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -167,7 +167,7 @@
         <!--Result View Controller-->
         <scene sceneID="ZYQ-Gr-lEI">
             <objects>
-                <viewController id="2iG-QZ-JZO" customClass="ResultViewController" customModule="Whats_for_lunch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2iG-QZ-JZO" customClass="ResultViewController" customModule="RNG" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Z1-XS-k2M"/>
                         <viewControllerLayoutGuide type="bottom" id="lPj-p8-iGX"/>

@@ -11,17 +11,15 @@
 		B028ED521C6ADBB200B9AD0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028ED511C6ADBB200B9AD0E /* ViewController.swift */; };
 		B028ED551C6ADBB200B9AD0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B028ED531C6ADBB200B9AD0E /* Main.storyboard */; };
 		B028ED571C6ADBB200B9AD0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B028ED561C6ADBB200B9AD0E /* Assets.xcassets */; };
-		B028ED5A1C6ADBB200B9AD0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B028ED581C6ADBB200B9AD0E /* LaunchScreen.storyboard */; };
 		B0727D081C6FC47D00817B89 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0727D071C6FC47D00817B89 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B028ED4C1C6ADBB200B9AD0E /* Whats-for-lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whats-for-lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B028ED4C1C6ADBB200B9AD0E /* RNG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B028ED4F1C6ADBB200B9AD0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B028ED511C6ADBB200B9AD0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B028ED541C6ADBB200B9AD0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B028ED561C6ADBB200B9AD0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B028ED591C6ADBB200B9AD0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B028ED5B1C6ADBB200B9AD0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0727D071C6FC47D00817B89 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +46,7 @@
 		B028ED4D1C6ADBB200B9AD0E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B028ED4C1C6ADBB200B9AD0E /* Whats-for-lunch.app */,
+				B028ED4C1C6ADBB200B9AD0E /* RNG.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,7 +59,6 @@
 				B028ED531C6ADBB200B9AD0E /* Main.storyboard */,
 				B0727D071C6FC47D00817B89 /* ResultViewController.swift */,
 				B028ED561C6ADBB200B9AD0E /* Assets.xcassets */,
-				B028ED581C6ADBB200B9AD0E /* LaunchScreen.storyboard */,
 				B028ED5B1C6ADBB200B9AD0E /* Info.plist */,
 			);
 			path = "Whats-for-lunch";
@@ -84,7 +81,7 @@
 			);
 			name = "Whats-for-lunch";
 			productName = "Whats-for-lunch";
-			productReference = B028ED4C1C6ADBB200B9AD0E /* Whats-for-lunch.app */;
+			productReference = B028ED4C1C6ADBB200B9AD0E /* RNG.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +122,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B028ED5A1C6ADBB200B9AD0E /* LaunchScreen.storyboard in Resources */,
 				B028ED571C6ADBB200B9AD0E /* Assets.xcassets in Resources */,
 				B028ED551C6ADBB200B9AD0E /* Main.storyboard in Resources */,
 			);
@@ -153,14 +149,6 @@
 				B028ED541C6ADBB200B9AD0E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B028ED581C6ADBB200B9AD0E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B028ED591C6ADBB200B9AD0E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -257,7 +245,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sxu.Whats-for-lunch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RNG;
 			};
 			name = Debug;
 		};
@@ -269,7 +257,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sxu.Whats-for-lunch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RNG;
 			};
 			name = Release;
 		};

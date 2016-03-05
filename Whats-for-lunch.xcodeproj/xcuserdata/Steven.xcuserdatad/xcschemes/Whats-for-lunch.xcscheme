@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B028ED4B1C6ADBB200B9AD0E"
-               BuildableName = "Whats-for-lunch.app"
+               BuildableName = "RNG.app"
                BlueprintName = "Whats-for-lunch"
                ReferencedContainer = "container:Whats-for-lunch.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B028ED4B1C6ADBB200B9AD0E"
-            BuildableName = "Whats-for-lunch.app"
+            BuildableName = "RNG.app"
             BlueprintName = "Whats-for-lunch"
             ReferencedContainer = "container:Whats-for-lunch.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B028ED4B1C6ADBB200B9AD0E"
-            BuildableName = "Whats-for-lunch.app"
+            BuildableName = "RNG.app"
             BlueprintName = "Whats-for-lunch"
             ReferencedContainer = "container:Whats-for-lunch.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B028ED4B1C6ADBB200B9AD0E"
-            BuildableName = "Whats-for-lunch.app"
+            BuildableName = "RNG.app"
             BlueprintName = "Whats-for-lunch"
             ReferencedContainer = "container:Whats-for-lunch.xcodeproj">
          </BuildableReference>

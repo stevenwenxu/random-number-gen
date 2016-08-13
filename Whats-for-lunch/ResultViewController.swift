@@ -26,7 +26,7 @@ class ResultViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let swipeGesture = UISwipeGestureRecognizer(target: self, action: "viewDidSwipe")
+		let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(ResultViewController.viewDidSwipe))
 		swipeGesture.direction = .Down
 		self.view.addGestureRecognizer(swipeGesture)
 	}

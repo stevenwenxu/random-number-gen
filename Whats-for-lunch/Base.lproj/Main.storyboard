@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -119,12 +119,12 @@
                                 <exclude reference="6fB-DA-egX"/>
                                 <exclude reference="DIb-1e-ES9"/>
                                 <exclude reference="cPn-rb-1K9"/>
+                                <exclude reference="n9Z-Th-h7Y"/>
                                 <exclude reference="4Fa-gX-NfS"/>
                                 <exclude reference="V1E-Kk-2ok"/>
                                 <exclude reference="gTa-i2-IvW"/>
-                                <exclude reference="6by-0M-TlQ"/>
-                                <exclude reference="n9Z-Th-h7Y"/>
                                 <exclude reference="T5e-3Y-SDD"/>
+                                <exclude reference="6by-0M-TlQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -135,22 +135,22 @@
                                 <include reference="PTs-Lw-RU4"/>
                                 <exclude reference="TV7-Zq-2Pk"/>
                                 <include reference="cPn-rb-1K9"/>
+                                <exclude reference="4Q8-1l-OB8"/>
+                                <include reference="KF6-IX-VCk"/>
+                                <exclude reference="cKr-uZ-Lr7"/>
+                                <include reference="n9Z-Th-h7Y"/>
                                 <include reference="4Fa-gX-NfS"/>
                                 <exclude reference="5Lm-kS-lHO"/>
                                 <exclude reference="9SO-uA-GtX"/>
                                 <include reference="V1E-Kk-2ok"/>
                                 <include reference="gTa-i2-IvW"/>
+                                <include reference="T5e-3Y-SDD"/>
+                                <exclude reference="hmp-rV-rgQ"/>
+                                <exclude reference="mvI-rZ-YRO"/>
                                 <exclude reference="aF3-rS-1XV"/>
                                 <include reference="lFq-eU-2HS"/>
                                 <include reference="ztI-Ib-geW"/>
                                 <include reference="6by-0M-TlQ"/>
-                                <exclude reference="4Q8-1l-OB8"/>
-                                <include reference="KF6-IX-VCk"/>
-                                <exclude reference="cKr-uZ-Lr7"/>
-                                <include reference="n9Z-Th-h7Y"/>
-                                <include reference="T5e-3Y-SDD"/>
-                                <exclude reference="hmp-rV-rgQ"/>
-                                <exclude reference="mvI-rZ-YRO"/>
                             </mask>
                         </variation>
                     </view>

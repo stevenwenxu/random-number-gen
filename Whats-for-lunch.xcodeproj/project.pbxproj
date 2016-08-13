@@ -91,11 +91,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Steven Xu";
 				TargetAttributes = {
 					B028ED4B1C6ADBB200B9AD0E = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 6E2PC57P73;
+						DevelopmentTeamName = "wen xu (Personal Team)";
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -241,11 +244,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Whats-for-lunch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sxu.Whats-for-lunch";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.sxu.Whats-for-lunch";
 				PRODUCT_NAME = RNG;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -253,11 +258,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Whats-for-lunch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sxu.Whats-for-lunch";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.sxu.Whats-for-lunch";
 				PRODUCT_NAME = RNG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

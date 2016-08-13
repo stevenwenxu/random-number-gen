@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 		super.viewDidLoad()
 		self.fromTextField.delegate = self
 		self.toTextField.delegate = self
-		let tapGesture = UITapGestureRecognizer(target: self, action: "didTapView")
+		let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTapView))
 		self.view.addGestureRecognizer(tapGesture)
 	}
 

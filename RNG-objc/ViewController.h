@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-@property (readonly) NSMutableArray<UIImage*> *imageArray;
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
 @end
 

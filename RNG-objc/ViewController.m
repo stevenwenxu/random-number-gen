@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "RNGModel.h"
 
-@interface ViewController () <UITextFieldDelegate>
+@interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *resultview;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *resultViewHeight;
@@ -17,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *toTextField;
 @property (weak, nonatomic) IBOutlet UIButton *generateBtn;
 
-@property (readwrite) NSMutableArray<UIImage*> *imageArray;
 @property CGFloat xSoFar;
 
 @end
@@ -28,7 +28,6 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
-        self.imageArray = [NSMutableArray array];
         self.xSoFar = 0;
     }
     return self;
@@ -38,11 +37,16 @@
     [super viewDidLoad];
     self.fromTextField.delegate = self;
     self.toTextField.delegate = self;
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewDidTap)];
+    [self.view addGestureRecognizer:recognizer];
+}
+
+- (void)viewDidTap {
+    [self.view endEditing:YES];
 }
 
 - (IBAction)didTapGenerate {
     NSNumber *num = [self getRandomNum];
-    [self.imageArray removeAllObjects];
     for (UIImageView *image in self.resultview.subviews) {
         [image removeFromSuperview];
     }
@@ -62,7 +66,6 @@
             UIImage *image = [UIImage imageNamed:[NSString stringWithCharacters:&myChar length:1]];
             rawWidth += image.size.width;
             rawHeight += image.size.height;
-            [self.imageArray addObject:image];
         }
         rawHeight /= num.stringValue.length;
 
@@ -80,8 +83,9 @@
 //        NSLog(@"rawWidth: %f, rawHeight: %f, scale: %f", rawWidth, rawHeight, scale);
 //        NSLog(@"desiredWidth: %f, desiredHeight: %f", desiredWidth, desiredHeight);
 
-        for (NSUInteger i = 0; i < self.imageArray.count; i++) {
-            UIImage *image = [self.imageArray objectAtIndex:i];
+        for (NSUInteger i = 0; i < num.stringValue.length; i++) {
+            unichar name = [num.stringValue characterAtIndex:i];
+            UIImage *image = [UIImage imageNamed:[NSString stringWithCharacters:&name length:1]];
             CGFloat width = desiredWidth / num.stringValue.length;
             UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(self.xSoFar, 0, width, desiredHeight)];
             iv.image = image;
@@ -95,12 +99,7 @@
     NSString *from = self.fromTextField.text;
     NSString *to = self.toTextField.text;
     if (from != nil && to != nil) {
-        if (from.integerValue > to.integerValue) {
-            return nil;
-        }
-        int randNum = arc4random_uniform(to.intValue - from.intValue + 1) + from.intValue;
-        NSLog(@"randNum is: %d", randNum);
-        return [NSNumber numberWithInt:randNum];
+        return [[RNGModel sharedInstance] getRandomNumFrom:from.intValue to:to.intValue];
     }
     return nil;
 }

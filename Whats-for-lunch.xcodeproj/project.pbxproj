@@ -18,6 +18,8 @@
 		B0298B7F1D5F7E180043B457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0298B7E1D5F7E180043B457 /* Assets.xcassets */; };
 		B0298B821D5F7E180043B457 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0298B801D5F7E180043B457 /* LaunchScreen.storyboard */; };
 		B0298B871D5F7E5F0043B457 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B028ED561C6ADBB200B9AD0E /* Assets.xcassets */; };
+		B0298B8A1D62157A0043B457 /* ExceptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0298B891D62157A0043B457 /* ExceptionsViewController.m */; };
+		B0298B8C1D6235170043B457 /* RNGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B0298B8B1D6235170043B457 /* RNGModel.m */; };
 		B0727D081C6FC47D00817B89 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0727D071C6FC47D00817B89 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,10 @@
 		B0298B7E1D5F7E180043B457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0298B811D5F7E180043B457 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0298B831D5F7E180043B457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0298B881D62157A0043B457 /* ExceptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExceptionsViewController.h; sourceTree = "<group>"; };
+		B0298B891D62157A0043B457 /* ExceptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExceptionsViewController.m; sourceTree = "<group>"; };
+		B0298B8B1D6235170043B457 /* RNGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNGModel.m; sourceTree = "<group>"; };
+		B0298B8D1D62352E0043B457 /* RNGModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNGModel.h; sourceTree = "<group>"; };
 		B0727D071C6FC47D00817B89 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +104,10 @@
 				B0298B781D5F7E180043B457 /* ViewController.h */,
 				B0298B791D5F7E180043B457 /* ViewController.m */,
 				B0298B7B1D5F7E180043B457 /* Main.storyboard */,
+				B0298B881D62157A0043B457 /* ExceptionsViewController.h */,
+				B0298B891D62157A0043B457 /* ExceptionsViewController.m */,
+				B0298B8D1D62352E0043B457 /* RNGModel.h */,
+				B0298B8B1D6235170043B457 /* RNGModel.m */,
 				B0298B7E1D5F7E180043B457 /* Assets.xcassets */,
 				B0298B801D5F7E180043B457 /* LaunchScreen.storyboard */,
 				B0298B831D5F7E180043B457 /* Info.plist */,
@@ -169,6 +179,7 @@
 					};
 					B0298B6F1D5F7E180043B457 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6E2PC57P73;
 					};
 				};
 			};
@@ -230,8 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0298B7A1D5F7E180043B457 /* ViewController.m in Sources */,
+				B0298B8C1D6235170043B457 /* RNGModel.m in Sources */,
 				B0298B771D5F7E180043B457 /* AppDelegate.m in Sources */,
 				B0298B741D5F7E180043B457 /* main.m in Sources */,
+				B0298B8A1D62157A0043B457 /* ExceptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,11 +395,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "RNG-objc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.sxu.RNG-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -395,11 +411,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "RNG-objc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.sxu.RNG-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -431,6 +450,7 @@
 				B0298B851D5F7E180043B457 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

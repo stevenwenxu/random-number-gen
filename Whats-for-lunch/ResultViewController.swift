@@ -27,11 +27,11 @@ class ResultViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(ResultViewController.viewDidSwipe))
-		swipeGesture.direction = .Down
+		swipeGesture.direction = .down
 		self.view.addGestureRecognizer(swipeGesture)
 	}
 
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		let digits = String(self.resultNum).characters.map { String($0) }
 		digits.forEach { self.images.append(UIImage(named: $0)!) }
@@ -50,7 +50,7 @@ class ResultViewController: UIViewController {
 	}
 
 	func viewDidSwipe() {
-		self.dismissViewControllerAnimated(true, completion: nil)
+		self.dismiss(animated: true, completion: nil)
 	}
 
 }
